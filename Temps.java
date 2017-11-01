@@ -7,27 +7,61 @@
  */
 public class Temps
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
+    
+    public int hour;
+    public int min;
+    public int sec;
     /**
      * Constructor for objects of class Temps
      */
-    public Temps()
+    public Temps(int h, int m, int s)
     {
-        // initialise instance variables
-        x = 0;
+        assert m<=59 && m>=0 && s<=59 && s>=0;
+        hour=h;
+        min=m;
+        sec=s;
+        
     }
 
     /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
+     *Retourne le nombre total de secondes de ce temps
      */
-    public int sampleMethod(int y)
+    public int toSecondes()
     {
-        // put your code here
-        return x + y;
+        
+        return (hour*3600+min*60+sec);
+    }
+    /**
+     * Retourne la difference entre ce temps-ci et t, en secondes
+     * (positif si ce temps-ci est plus grand).
+     */
+    public int delta(Temps t){
+    return this.toSecondes()-t.toSecondes();
+     }
+    /**
+     * 
+     * Retourne true si ce temps-ci est plus grand que t
+     */
+    public boolean apres(Temps t){
+        return (this.toSecondes()>t.toSecondes());
+    }
+    /**
+     * 
+     *  Ajoute t a ce temps-ci. Corrige de maniere 
+     *  a ce que les minutes et les secondes soient dans 
+     *  l’intervalle [0 . . . 59], en reportant 
+     *  au besoin les valeurs hors limites sur les unites superieures 
+     *  (60 secondes = 1 minute, 60 minutes = 1 heure).
+     */
+    public void ajouter(Temps t){
+        
+    }
+    /**
+     *
+     * retourne ce temps sous la forme de texte “heures :minutes :secondes”. Astuce : la methode ´
+     * String.format("%02d:%02d:%02d", heures, minutes, secondes)
+     * retourne le String desire avec les nombres en deux chiffres en ajoutant les zeros necessaires. 
+     */
+    public String toString(){
     }
 }
