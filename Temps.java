@@ -54,6 +54,19 @@ public class Temps
      *  (60 secondes = 1 minute, 60 minutes = 1 heure).
      */
     public void ajouter(Temps t){
+        int x=t.toSecondes()+this.toSecondes();
+        
+        int numberOfHours;
+        int numberOfMinutes;
+        int numberOfSeconds;
+
+        
+        numberOfHours = (x) / 3600 ;
+        numberOfMinutes = ((x) % 3600 ) / 60 ;
+        numberOfSeconds = ((x) % 3600 ) % 60 ;
+        hour=numberOfHours;
+        min=numberOfMinutes;
+        sec=numberOfSeconds;
         
     }
     /**
@@ -63,5 +76,6 @@ public class Temps
      * retourne le String desire avec les nombres en deux chiffres en ajoutant les zeros necessaires. 
      */
     public String toString(){
+        return String.format("%02d:%02d:%02d", hour, min, sec);
     }
 }
