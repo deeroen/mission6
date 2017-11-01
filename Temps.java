@@ -5,7 +5,7 @@
  * @author (your name)
  * @version (a version number or a date)
  */
-public class Temps
+public class Temps extends TestTemps
 {
     
     public int hour;
@@ -16,7 +16,7 @@ public class Temps
      */
     public Temps(int h, int m, int s)
     {
-        assert m<=59 && m>=0 && s<=59 && s>=0;
+        if(m>59 && m<0 && s>59 && s<00) {System.out.println("erreur dans le nbr de sec ou min");}
         hour=h;
         min=m;
         sec=s;
