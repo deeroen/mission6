@@ -28,20 +28,20 @@ public class Chanson
      * 
      */
     public String getTitre(){
-        return titre.toUpperCase();
+        return titre;
     
     }
     
     /**
-     * Retourne l’auteur de cette chanson.
+     * Retourne l auteur de cette chanson.
      *
      */
-    public String getAteur(){
-        return auteur.toUpperCase();
+    public String getAuteur(){
+        return auteur;
     }
     /**
-     * Retourne la duree de cette chanson. ´
-     * — String toString()
+     * Retourne la duree de cette chanson. 
+     *
      */
     public Temps getDuree(){
         return duree;
@@ -51,6 +51,6 @@ public class Chanson
      * TITRE - AUTEUR - DUREE
      */
     public String toString(){
-        return (this.getTitre()+" "+this.getAteur() + " "+this.getDuree().toString());
+        return (this.getTitre()+" "+this.getAuteur() + " "+this.getDuree().toString());
     }
  }

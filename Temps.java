@@ -49,7 +49,7 @@ public class Temps extends TestTemps
      * 
      *  Ajoute t a ce temps-ci. Corrige de maniere 
      *  a ce que les minutes et les secondes soient dans 
-     *  l’intervalle [0 . . . 59], en reportant 
+     *  l intervalle [0 . . . 59], en reportant 
      *  au besoin les valeurs hors limites sur les unites superieures 
      *  (60 secondes = 1 minute, 60 minutes = 1 heure).
      */
@@ -71,8 +71,7 @@ public class Temps extends TestTemps
     }
     /**
      *
-     * retourne ce temps sous la forme de texte “heures :minutes :secondes”. Astuce : la methode ´
-     * String.format("%02d:%02d:%02d", heures, minutes, secondes)
+     * retourne ce temps sous la forme de texte heures :minutes :secondes. 
      * retourne le String desire avec les nombres en deux chiffres en ajoutant les zeros necessaires. 
      */
     public String toString(){
